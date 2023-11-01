@@ -22,7 +22,9 @@ useEffect(()=>{
 
 const getList = listings.map((listing)=>
 <JetCard key={listing.id} jet={listing} bookme={bookme}/>)
-// console.log(listings)
+console.log(listings)
+console.log(process.env.REACT_APP_BACKEND_URL);
+
 
 
 

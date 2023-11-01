@@ -3,10 +3,10 @@ import PassengerCard from './PassengerCard'
 
 export default function Passenger({passengers,setPassengers,user}) {
 
-    
+  const backendURL = process.env.REACT_APP_BACKEND_URL;
 
     useEffect(() =>{
-        fetch(`/passengers/member/${user.id}`)
+        fetch(`${backendURL}/passengers/member/${user.id}`)
         .then((res) => {
           if (res.ok) {
             res.json().then((passengers) => {

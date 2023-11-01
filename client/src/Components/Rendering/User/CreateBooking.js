@@ -49,7 +49,7 @@ const navigate = useNavigate()
         member_id: user.id,
       };
   
-    fetch('/bookings', {
+    fetch(`${process.env.REACT_APP_BACKEND_URL}/bookings`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

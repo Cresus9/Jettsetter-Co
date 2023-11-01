@@ -32,7 +32,7 @@ const navigate= useNavigate();
             member_id:user.id
           };
       
-        fetch('/passengers', {
+        fetch(`${process.env.REACT_APP_BACKEND_URL}/passengers`, {
           method: "POST",
           headers: {
             "Content-Type": "application/json",

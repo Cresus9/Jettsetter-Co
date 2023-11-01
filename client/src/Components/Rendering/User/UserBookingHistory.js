@@ -2,9 +2,10 @@ import React,{ useEffect} from 'react'
 import UserBookingHistoryCard from './UserBookingHistoryCard';
 
 export default function UserBookingHistory({ user,bookings,setBookings }) {
+  const backendURL = process.env.REACT_APP_BACKEND_URL;
   
     useEffect(() =>{
-        fetch(`/bookings/member/${user.id}`)
+        fetch(`${backendURL}/bookings/member/${user.id}`)
         .then((res) => {
           if (res.ok) {
             res.json().then((bookings) => {

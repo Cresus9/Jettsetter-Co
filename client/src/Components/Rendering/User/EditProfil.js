@@ -12,6 +12,8 @@ export default function EditProfil({user, setUser}) {
     const [updated, setUpdated]=useState({...UpdateBody})
     const [errors, setErrors] = useState([])
 
+    const backendURL = process.env.REACT_APP_BACKEND_URL;
+
     const changeHandler = (e) =>{
         setUpdated({
             ...updated,
@@ -21,7 +23,7 @@ export default function EditProfil({user, setUser}) {
 
     const formHandler= (e) =>{
         e.preventDefault()
-        fetch(`/members/${user.id}`, {
+        fetch(`${backendURL}/members/${user.id}`, {
 			method: "PATCH",
 			headers: {
 				"Content-Type": "application/json",

@@ -25,6 +25,7 @@ function App() {
   
   const navigate = useNavigate();
   const [content, setContent]=useState([])
+  const backendURL = process.env.REACT_APP_BACKEND_URL;
 
    const signUpBody= {
     first_name :"",
@@ -50,7 +51,7 @@ const [logInData, setLogInData]= useState(logInBody)
   useEffect(() =>{
     let token=localStorage.getItem('jwt')
     if (token && !user.email){
-      fetch ("/profile",{
+      fetch (`${backendURL}/profile`,{
         headers: {
           token: token,
           "Content-Type": "application/json",
@@ -86,7 +87,7 @@ useEffect(()=>{
 
   const submitlogInUpdate =(e) =>{
     e.preventDefault();
-    fetch("/login", {
+    fetch(`${backendURL}/login`, {
       
       method: "POST",
       headers: {

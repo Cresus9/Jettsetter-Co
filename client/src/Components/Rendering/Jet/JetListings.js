@@ -6,7 +6,7 @@ export default function JetListings({jets, bookme}) {
   const [listings, setListings]= useState([])
 
 useEffect(()=>{
-    fetch ("/jets")
+    fetch (`${process.env.REACT_APP_BACKEND_URL}/jets`)
     .then((res) => {
       if (res.ok) {
         res.json().then((listings) => {

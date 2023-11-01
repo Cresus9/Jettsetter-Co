@@ -21,12 +21,14 @@ export default function SignUp({onLogin}) {
   const [errors, setErrors] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
 
+  const backendURL = process.env.REACT_APP_BACKEND_URL;
+
 
   function handleSubmit(e) {
     e.preventDefault();
     setErrors([]);
     setIsLoading(true);
-    fetch("/signup", {
+    fetch(`${backendURL}/signup`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

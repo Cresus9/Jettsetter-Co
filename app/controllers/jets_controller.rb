@@ -11,8 +11,10 @@ class JetsController < ApplicationController
 
   # GET /jets/1
   def show
-    render json: @jet
+    jet= Jet.find(params[:jet_id])
+    render json: jet
   end
+
 
   # POST /jets
   def create
@@ -41,9 +43,9 @@ class JetsController < ApplicationController
 
   private
     # Use callbacks to share common setup or constraints between actions.
-    def set_jet
-      @jet = Jet.find(params[:id])
-    end
+    # def set_jet
+    #   @jet = Jet.find(params[:id])
+    # end
 
     # Only allow a list of trusted parameters through.
     def jet_params

@@ -1,5 +1,5 @@
 class JetsController < ApplicationController
-  before_action :set_jet, only: [:show, :update, :destroy]
+  before_action :authorized, only: [:show]
 
  
 

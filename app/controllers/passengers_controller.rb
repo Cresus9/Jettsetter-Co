@@ -1,5 +1,5 @@
 class PassengersController < ApplicationController
-  before_action :set_passengers, only: [:show, :update, :destroy]
+  before_action :authorized, only: [:show]
 
 
   # GET /passengers

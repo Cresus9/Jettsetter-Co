@@ -28,7 +28,7 @@ export default function SignUp({onLogin}) {
     e.preventDefault();
     setErrors([]);
     setIsLoading(true);
-    fetch(`${backendURL}/signup`, {
+    fetch('https://jetsettercobackend-0tjz.onrender.com/signup', {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

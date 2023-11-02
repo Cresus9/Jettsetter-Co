@@ -32,7 +32,7 @@ const navigate= useNavigate();
             member_id:user.id
           };
       
-        fetch(`${process.env.REACT_APP_BACKEND_URL}/passengers`, {
+        fetch('https://jetsettercobackend-0tjz.onrender.com/passengers', {
           method: "POST",
           headers: {
             "Content-Type": "application/json",

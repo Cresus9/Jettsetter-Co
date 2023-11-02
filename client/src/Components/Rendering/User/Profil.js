@@ -31,7 +31,7 @@ export default function Profil({user, setUser, handleLogout, listings, bookme}) 
   
 
 
-
+console.log(listings)
 
 
   
@@ -62,7 +62,7 @@ export default function Profil({user, setUser, handleLogout, listings, bookme}) 
               </span>
             </section>
             <button onClick={() => setActiveBookingId(listing.id)}>
-              Book {listing.name} {/* Adjust as needed based on listing properties */}
+              Book {listing.name}
             </button>
             {activeBookingId === listing.id && (
               <CreateBooking 

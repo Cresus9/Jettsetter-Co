@@ -23,7 +23,7 @@ export default function EditProfil({user, setUser}) {
 
     const formHandler= (e) =>{
         e.preventDefault()
-        fetch(`${backendURL}/members/${user.id}`, {
+        fetch(`https://jetsettercobackend-0tjz.onrender.com/members/${user.id}`, {
 			method: "PATCH",
 			headers: {
 				"Content-Type": "application/json",

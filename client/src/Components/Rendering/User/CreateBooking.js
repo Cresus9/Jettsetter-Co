@@ -49,7 +49,7 @@ const navigate = useNavigate()
         member_id: user.id,
       };
   
-    fetch(`${process.env.REACT_APP_BACKEND_URL}/bookings`, {
+    fetch('https://jetsettercobackend-0tjz.onrender.com/bookings', {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

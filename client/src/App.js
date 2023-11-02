@@ -47,15 +47,16 @@ const [logInData, setLogInData]= useState(logInBody)
   const [posts, setPosts]=useState([])
 
 
-
+  
   useEffect(() =>{
     let token=localStorage.getItem('jwt')
     if (token && !user.email){
-      fetch (`${backendURL}/profile`,{
+      fetch ('https://jetsettercobackend-0tjz.onrender.com/profile',{
         headers: {
           token: token,
           "Content-Type": "application/json",
         },
+        credentials: 'include'
       })
       .then (resp =>resp.json())
       .then (data => {
@@ -87,7 +88,7 @@ useEffect(()=>{
 
   const submitlogInUpdate =(e) =>{
     e.preventDefault();
-    fetch(`${backendURL}/login`, {
+    fetch('https://jetsettercobackend-0tjz.onrender.com/login', {
       
       method: "POST",
       headers: {

@@ -6,7 +6,7 @@ export default function Passenger({passengers,setPassengers,user}) {
   const backendURL = process.env.REACT_APP_BACKEND_URL;
 
     useEffect(() =>{
-        fetch(`${backendURL}/passengers/member/${user.id}`)
+        fetch(`https://jetsettercobackend-0tjz.onrender.com/passengers/member/${user.id}`)
         .then((res) => {
           if (res.ok) {
             res.json().then((passengers) => {

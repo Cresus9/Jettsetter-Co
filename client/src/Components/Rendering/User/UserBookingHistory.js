@@ -5,7 +5,7 @@ export default function UserBookingHistory({ user,bookings,setBookings }) {
   const backendURL = process.env.REACT_APP_BACKEND_URL;
   
     useEffect(() =>{
-        fetch(`${backendURL}/bookings/member/${user.id}`)
+        fetch(`https://jetsettercobackend-0tjz.onrender.com/bookings/member/${user.id}`)
         .then((res) => {
           if (res.ok) {
             res.json().then((bookings) => {

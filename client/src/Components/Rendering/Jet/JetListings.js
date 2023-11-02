@@ -20,7 +20,7 @@ export default function JetListings({jets, bookme}) {
 //     })
 // }, []);
 useEffect(() => {
-  fetch(`${process.env.REACT_APP_BACKEND_URL}/jets`)
+  fetch('https://jetsettercobackend-0tjz.onrender.com/jets')
     .then((res) => {
       if (res.ok) {
         return res.json();

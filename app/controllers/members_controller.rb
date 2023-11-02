@@ -33,14 +33,16 @@ class MembersController < ApplicationController
 
   def profile
     token = request.headers["token"]
-   
     member_id = decode_token(token)
-    if member_id
-      render json: Member.find_by(id: member_id)
+    member = Member.find_by(member_id: member_id)
+    
+    if member
+      render json: member
     else
-      render json: {error: "401 incorrect token"}, status: 401
+      render json: {error: "User not found"}, status: 404
     end
   end
+  
 
   def logout
     member=Member.find_by(id:member_id)

@@ -60,6 +60,7 @@ const [logInData, setLogInData]= useState(logInBody)
       })
       .then (resp =>resp.json())
       .then (data => {
+        console.log(data)
         if(data.user){
           setUser(data.user)
           console.log(data.user)}

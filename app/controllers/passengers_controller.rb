@@ -1,5 +1,6 @@
 class PassengersController < ApplicationController
-  skip_before_action :authorized
+  before_action :set_passengers, only: [:show, :update, :destroy]
+
 
   # GET /passengers
   def index

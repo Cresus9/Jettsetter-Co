@@ -1,5 +1,6 @@
 class JetsController < ApplicationController
-  skip_before_action :authorized
+  before_action :set_jet, only: [:show, :update, :destroy]
+
  
 
   # GET /jets

@@ -1,5 +1,6 @@
 class BookingsController < ApplicationController
-  skip_before_action :authorized
+  before_action :set_booking, only: [:show, :update, :destroy]
+
 
   # GET /bookings
   def index

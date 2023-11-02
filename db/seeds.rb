@@ -11,7 +11,7 @@ Member.destroy_all
 Passenger.destroy_all
 
 
-Member.create(first_name:"Thierry" ,first_name:"Yabre" ,email:"thierry@gmail.com" ,password_digest:"123" ,phone_number:"233-322-3332")
+Member.create(first_name:"Thierry" ,last_name:"Yabre" ,email:"thierry@gmail.com" ,password_digest:"123" ,phone_number:"233-322-3332")
 Member.create(first_name:"Paul" ,last_name:"Numbier" ,email:"Paul@gmail.com" ,password_digest:"178" ,phone_number:"289-322-3332")
 Member.create(first_name:"Justin" ,last_name:"Johnson" ,email:"Justin@gmail.com" ,password_digest:"120" ,phone_number:"233-002-3332")
 Member.create(first_name:"Ashley" ,last_name:"Dupont" ,email:"ashley@gmail.com" ,password_digest:"023" ,phone_number:"293-322-3332")

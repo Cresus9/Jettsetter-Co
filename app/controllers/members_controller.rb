@@ -34,7 +34,7 @@ class MembersController < ApplicationController
   def profile
     token = request.headers["token"]
     member_id = decode_token(token)
-    member = Member.find_by(member_id: member_id)
+    member = Member.find_by(id: member_id)
     
     if member
       render json: member

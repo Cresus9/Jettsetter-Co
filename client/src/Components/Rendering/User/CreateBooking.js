@@ -11,7 +11,7 @@ function CreateBooking({user, bookings, setBookings,selectedJet}) {
 if (!selectedJet) return null;
 
 const navigate = useNavigate()
-  // console.log(user)
+  console.log(user)
   
 
   const [total_passenger,setTotal_passenger]=useState('')

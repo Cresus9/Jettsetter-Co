@@ -58,13 +58,25 @@ const [logInData, setLogInData]= useState(logInBody)
         },
         credentials: 'include'
       })
-      .then (resp =>resp.json())
-      .then (data => {
-        console.log(data)
-        if(data.user){
-          setUser(data.user)
-          console.log(data.user)}
-      });
+      .then(resp => {
+        if (!resp.ok) {
+          throw new Error(`Server responded with ${resp.status}`);
+        }
+        return resp.json();
+    })
+    .then(data => {
+        if(data.user) {
+          setUser(data.user);
+          console.log(data.user);
+        }
+    })
+      // .then (resp =>resp.json())
+      // .then (data => {
+      //   console.log(data)
+      //   if(data.user){
+      //     setUser(data.user)
+      //     console.log(data.user)}
+      // });
     }
   }, []);
 

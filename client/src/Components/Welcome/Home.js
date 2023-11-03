@@ -24,7 +24,7 @@ export default function Home({onLogout, onLogin}) {
 	return(
 		<>
 			<section className='alert-section'>
-			<p>Traveling internationally? Stay updated with <a href="#your-link-here">COVID-19 travel guidance and restrictions</a>.</p>
+			<p>Traveling internationally? Stay updated with <a href="https://www.usa.gov/covid-international-travel">COVID-19 travel guidance and restrictions</a>.</p>
 			</section>
 			<div className='home'>
   			<video className='video' src={video} autoPlay loop muted />

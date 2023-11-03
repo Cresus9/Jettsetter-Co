@@ -10,7 +10,7 @@ function CreateBooking({user, bookings, setBookings,selectedJet}) {
 
 if (!selectedJet) return null;
 
-const navigate = useNavigate()
+  const navigate = useNavigate()
   console.log(user)
   
 
@@ -42,7 +42,7 @@ const navigate = useNavigate()
         to:to,
         from:from,
         jet_id:selectedJet.id,
-        // member_id:member_id,
+        member_id:member_id,
         total_passenger:total_passenger,
 
         // ...bookingForm,

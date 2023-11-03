@@ -25,7 +25,6 @@ function App() {
   
   const navigate = useNavigate();
   const [content, setContent]=useState([])
-  const backendURL = process.env.REACT_APP_BACKEND_URL;
 
    const signUpBody= {
     first_name :"",
@@ -59,6 +58,11 @@ const [logInData, setLogInData]= useState(logInBody)
         credentials: 'include'
       })
       .then(resp => {
+        if (resp.status === 404) {
+          console.warn('Profile not found for this user.');
+          localStorage.removeItem('jwt');
+          return;
+        }
         if (!resp.ok) {
           throw new Error(`Server responded with ${resp.status}`);
         }
@@ -70,20 +74,14 @@ const [logInData, setLogInData]= useState(logInBody)
           console.log(data.user);
         }
     })
-      // .then (resp =>resp.json())
-      // .then (data => {
-      //   console.log(data)
-      //   if(data.user){
-      //     setUser(data.user)
-      //     console.log(data.user)}
-      // });
+     
     }
   }, []);
 
   
 
 
-
+console.log(content)
 
 useEffect(()=>{
 },[navigate])

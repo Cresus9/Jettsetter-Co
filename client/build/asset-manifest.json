@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.2f84e34e.css",
-    "main.js": "/static/js/main.1962eca0.js",
+    "main.css": "/static/css/main.8c508b0d.css",
+    "main.js": "/static/js/main.54360557.js",
     "static/media/shutterstock_747646759.jpg": "/static/media/shutterstock_747646759.c7c3c9daff4ad143e16c.jpg",
     "static/media/shutterstock_683248198.jpg": "/static/media/shutterstock_683248198.7f0d705eac1bf1274cd6.jpg",
     "static/media/shutterstock_1928348165.jpg": "/static/media/shutterstock_1928348165.8815fa9cc91fdf45ad84.jpg",
@@ -14,11 +14,11 @@
     "static/media/pexels-ian-turnell-709552.jpg": "/static/media/pexels-ian-turnell-709552.4b8e944d434dca2cbcd7.jpg",
     "static/media/pexels-asad-photo-maldives-1430676.jpg": "/static/media/pexels-asad-photo-maldives-1430676.063c1522cf91bd386c4e.jpg",
     "index.html": "/index.html",
-    "main.2f84e34e.css.map": "/static/css/main.2f84e34e.css.map",
-    "main.1962eca0.js.map": "/static/js/main.1962eca0.js.map"
+    "main.8c508b0d.css.map": "/static/css/main.8c508b0d.css.map",
+    "main.54360557.js.map": "/static/js/main.54360557.js.map"
   },
   "entrypoints": [
-    "static/css/main.2f84e34e.css",
-    "static/js/main.1962eca0.js"
+    "static/css/main.8c508b0d.css",
+    "static/js/main.54360557.js"
   ]
 }

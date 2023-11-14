@@ -19,6 +19,8 @@ import Dashboard from './Components/Rendering/User/Dashboard';
 import Passenger from './Components/Rendering/User/Passenger';
 import CreatePassenger from './Components/Rendering/User/CreatePassenger';
 import JetCard from './Components/Rendering/Jet/JetCard';
+import Mapcard from './Components/Welcome/Map/Mapcard';
+
 
 
 function App() {
@@ -179,6 +181,7 @@ return (
             <NavBar />
             <Home />
             <JetListings jets={setContent} bookme={bookme}/>
+            <Mapcard />
             <Footer />
           </>}/>
       </Routes> 
